@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropdown menu</title><style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#18212b;background:#f4f6f8}
+*{box-sizing:border-box}body{margin:0;line-height:1.6}main{max-width:1000px;margin:32px auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 8px 28px #0001}
+h1,h2{line-height:1.2}a{color:#075db5}a:hover{color:#003c78}input,select,button{font:inherit;padding:7px;margin:5px 0}button,input[type=submit],input[type=reset]{cursor:pointer}table{border-collapse:collapse;width:100%;max-width:600px}th,td{border:1px solid #68717b;padding:10px;text-align:left}th{background:#e9eef3}.back{display:inline-block;margin-bottom:18px}
+</style>
+</head><body><main><a class="back" href="index.html">← Home</a>
+<h1>Choose a device</h1><label for="device">Device:</label><select id="device" name="device"><option value="">-- Choose one --</option><option value="iphone">iPhone</option><option value="ipad">iPad</option><option value="imac">iMac</option></select><p id="result" aria-live="polite">Your choice will appear here.</p>
+</main><script>document.getElementById('device').addEventListener('change',function(){document.getElementById('result').textContent=this.value?'You selected: '+this.options[this.selectedIndex].text:'Your choice will appear here.';});</script></body></html>

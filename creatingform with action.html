@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML5 input types</title><style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#18212b;background:#f4f6f8}
+*{box-sizing:border-box}body{margin:0;line-height:1.6}main{max-width:1000px;margin:32px auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 8px 28px #0001}
+h1,h2{line-height:1.2}a{color:#075db5}a:hover{color:#003c78}input,select,button{font:inherit;padding:7px;margin:5px 0}button,input[type=submit],input[type=reset]{cursor:pointer}table{border-collapse:collapse;width:100%;max-width:600px}th,td{border:1px solid #68717b;padding:10px;text-align:left}th{background:#e9eef3}.back{display:inline-block;margin-bottom:18px}
+</style>
+</head><body><main><a class="back" href="index.html">← Home</a>
+<h1>HTML5 input types demo</h1><p>Try the different input types below. This demo checks your entries in your browser and does not send them to an external website.</p><form id="demoForm"><p><label>Color: <input type="color" name="color" autofocus></label></p><p><label>Date: <input type="date" name="date"></label></p><p><label>Email: <input type="email" name="email" placeholder="name@example.com" required></label></p><p><label>Number (0–7): <input type="number" name="number" min="0" max="7" step="1"></label></p><p><label>Range (0–20): <input type="range" name="range" min="0" max="20" value="10" oninput="rangeValue.value=this.value"> <output id="rangeValue">10</output></label></p><p><label>Search: <input type="search" name="search" placeholder="Enter a search query"></label></p><p><label>Website URL: <input type="url" name="url" placeholder="https://example.com"></label></p><input type="submit" value="Submit"><input type="reset" value="Clear"></form><p id="result" aria-live="polite"></p>
+</main><script>document.getElementById('demoForm').addEventListener('submit',function(e){e.preventDefault();if(!this.reportValidity())return;document.getElementById('result').textContent='Your form entries are valid. This is a local demo; nothing was sent.';});document.getElementById('demoForm').addEventListener('reset',function(){document.getElementById('result').textContent='';document.getElementById('rangeValue').textContent='10';});</script></body></html>
